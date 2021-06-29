@@ -5,8 +5,8 @@ public class Main {
         ExceptionsThrown exceptionsThrown = new ExceptionsThrown();
         try{
             exceptionsThrown.throwAll();
-        }catch (Exception exception){
-            System.out.println(exception);
+        }catch (ExceptionOne | ExceptionTwo | ExceptionThree exception){
+            System.out.println(exception.getMessage());
         }finally {
             System.out.println("This is finally");
         }
